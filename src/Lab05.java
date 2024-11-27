@@ -1,22 +1,23 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-public class Main {
+public class Lab05 {
     public static void main(String[] args) {
-        Assassin hero = new Assassin("Hero", 8);
+        Assassin hero = new Assassin("Hero");
         Sword sword = new Sword("Diamond Sword", 1, 40);
         Shield shield = new Shield("Wooden Shield", 1, 10);
 
-        Priest villain = new Priest ("Villain", 20);
+        Priest villain = new Priest ("Villain");
 
         Boot boots = new Boot("Speedy Boots",2);
         Necklace necklace = new Necklace("Prayer Beads", 3);
 
         hero.Status();
+        villain.Status();
 
         hero.equipAccessory(boots);
         hero.equipAccessory(necklace);
-
+        villain.equipAccessory(boots);
+        System.out.println("");
         hero.Status();
+        villain.Status();
         System.out.println("");
         hero.equipSword(sword);
         hero.equipShield(shield);
@@ -24,7 +25,7 @@ public class Main {
         hero.useAbility(1,hero);
         hero.Status();
 
-        boots.levelUp();;
+        boots.levelUp();
 
         hero.attack(villain);
         villain.Status();
